@@ -1,0 +1,53 @@
+include  ../../users/dashboard
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Khs
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input data khs
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="POST", action='/'+khss._id + '/editkhs')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='npm') Npm
+                                        .col-sm-10
+                                            input#npm.form-control(type='text' required name="npm" placeholder='npm' value= (npm == undefined) ? khss.npm: npm)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='semester') Semester
+                                        .col-sm-10
+                                            input#semester.form-control(type='text' name="semester" placeholder='Semester' value= (semester == undefined) ? khss.semester: semester)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='mata_kuliah') Mata Kuliah
+                                        .col-sm-10
+                                            input#mata_kuliah.form-control(type='text' name="mata_kuliah" placeholder='Mata Kuliah' value= (mata_kuliah == undefined) ? khss.mata_kuliah: mata_kuliah)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='ips') Ips
+                                        .col-sm-10
+                                            input#ips.form-control(type='text' name="ips" placeholder='Ips' value= (ips == undefined) ? khss.ips: ips)
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer
+

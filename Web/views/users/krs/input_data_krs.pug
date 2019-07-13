@@ -1,0 +1,53 @@
+include  ../../users/dashboard
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Krs
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input data krs
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="post", action="/inputkrs", role='form')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='npm') Npm
+                                        .col-sm-10
+                                            input#npm.form-control(type='text' required name="npm" placeholder='Npm')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='nama') Nama
+                                        .col-sm-10
+                                            input#nama.form-control(type='text' name="nama" placeholder='Nama')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='semester') Semester
+                                        .col-sm-10
+                                            input#semester.form-control(type='text' name="semester" placeholder='Semester')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='mata_kuliah') Mata Kuliah
+                                        .col-sm-10
+                                            input#mata_kuliah.form-control(type='mata_kuliah' name="mata_kuliah" placeholder='Mata Kuliah')
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer
+
